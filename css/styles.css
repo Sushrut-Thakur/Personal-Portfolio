@@ -40,6 +40,12 @@ body {
 	display: block;
 }
 
+.nav-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
 .nav-item {
 	color: white;
 	display: block;
@@ -91,7 +97,7 @@ body {
 	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 	grid-gap: 50px;
 	width: 100%;
-	max-width: 1300px;
+	max-width: 80vw;
 	margin: 0 auto 50px auto;
 }
 
@@ -122,6 +128,7 @@ body {
 #contact-section {
 	background-color: #999;
 	text-align: center;
+	border-top: 5px solid #222;
 }
 
 .contact-text {
@@ -159,4 +166,46 @@ footer {
 	padding: 20px;
 	text-align: center;
 	border-top: 5px solid #2196f3;
+}
+
+.credits {
+	font-size: 10px;
+}
+
+.credits a {
+	text-decoration: none;
+	color: #aaa;
+}
+
+@media (max-width: 700px) {
+	.project-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 400px) {
+	.nav-flex {
+		flex-direction: column;
+	}
+
+	.heading {
+		font-size: 48px;
+	}
+
+	.sub-text {
+		font-size: 24px;
+	}
+
+	.contact-text {
+		margin-bottom: 10px;
+	}
+
+	.contact-icon {
+		padding: 5px;
+	}
+
+	#project-profiles, #contact-pages {
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
